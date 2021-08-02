@@ -1,3 +1,4 @@
-# Javascript-Lesson
+# Adi-s-Training
 
-Javascript Date (creating  date object using the new Date()  )
+Here the progress of my training journey in learning Javascript
+Go Hard or Go Home
