@@ -1,17 +1,15 @@
-Different Kinds of Loops
-JavaScript supports different kinds of loops:
 
-for - loops through a block of code a number of times
-for/in - loops through the properties of an object
-for/of - loops through the values of an iterable object
-while - loops through a block of code while a specified condition is true
-do/while - also loops through a block of code while a specified condition is true
-
-Example :
 <!DOCTYPE html>
 <html>
 <body>
+<p>Different Kinds of Loops</br>
+JavaScript supports different kinds of loops:</br>
 
+for - loops through a block of code a number of times</br>
+for/in - loops through the properties of an object</br>
+for/of - loops through the values of an iterable object</br>
+while - loops through a block of code while a specified condition is true</br>
+do/while - also loops through a block of code while a specified condition is true</br></p>
 <h2>JavaScript For Loop</h2>
 
 <p id="demo"></p>
