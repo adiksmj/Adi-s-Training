@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>setDate()	Set the day as a number (1-31)</br>
+setFullYear()	Set the year (optionally month and day)</br>
+setHours()	Set the hour (0-23)</br>
+setMilliseconds()	Set the milliseconds (0-999)</br>
+setMinutes()	Set the minutes (0-59)</br>
+setMonth()	Set the month (0-11)</br>
+setSeconds()	Set the seconds (0-59)</br>
+setTime()	Set the time (milliseconds since January 1, 1970)</br></p>
+<h2>JavaScript setFullYear()</h2>
+<p>The setFullYear() method can optionally set month and day.</p>
+<p>Please note that month counts from 0. December is month 11:</p>
+
+<p id="demo"></p>
+
+<script>
+const d = new Date();
+d.setFullYear(2020, 11, 3);
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
+</html>
