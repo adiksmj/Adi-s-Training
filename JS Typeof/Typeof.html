@@ -45,7 +45,23 @@ document.getElementById("demo").innerHTML =
   typeof myCar + "<br>" +
   typeof null;
 </script>
+  
+<pre>&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
 
+&lt;script&gt;
+document.getElementById(&quot;demo&quot;).innerHTML = 
+  typeof &quot;john&quot; + &quot;&lt;br&gt;&quot; +
+  typeof 3.14 + &quot;&lt;br&gt;&quot; +
+  typeof NaN + &quot;&lt;br&gt;&quot; +
+  typeof false + &quot;&lt;br&gt;&quot; +
+  typeof [1,2,3,4] + &quot;&lt;br&gt;&quot; +
+  typeof {name:'john', age:34} + &quot;&lt;br&gt;&quot; +
+  typeof new Date() + &quot;&lt;br&gt;&quot; +
+  typeof function () {} + &quot;&lt;br&gt;&quot; +
+  typeof myCar + &quot;&lt;br&gt;&quot; +
+  typeof null;
+&lt;/script&gt;
+</pre>
 
 </body>
 </html>
