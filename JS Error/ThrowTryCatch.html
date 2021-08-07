@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>The try statement lets you test a block of code for errors.</br>
+
+The catch statement lets you handle the error.</br>
+
+  The throw statement lets you create custom errors.</br>
+
+  The finally statement lets you execute code, after try and catch, regardless of the result.</p>
+<h2>JavaScript try catch</h2>
+
+<pre>&lt;p&gt;Please input a number between 5 and 10:&lt;/p&gt;
+
+&lt;input id=&quot;demo&quot; type=&quot;text&quot;&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Test Input&lt;/button&gt;
+&lt;p id=&quot;p01&quot;&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction() {
+  const message = document.getElementById(&quot;p01&quot;);
+  message.innerHTML = &quot;&quot;;
+  let x = document.getElementById(&quot;demo&quot;).value;
+  try { 
+    if(x == &quot;&quot;)  throw &quot;empty&quot;;
+    if(isNaN(x)) throw &quot;not a number&quot;;
+    x = Number(x);
+    if(x &lt; 5)  throw &quot;too low&quot;;
+    if(x &gt; 10)   throw &quot;too high&quot;;
+  }
+  catch(err) {
+    message.innerHTML = &quot;Input is &quot; + err;
+  }
+}
+&lt;/script&gt;</pre>
+
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="p01"></p>
+
+<script>
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 5)  throw "too low";
+    if(x > 10)   throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+
