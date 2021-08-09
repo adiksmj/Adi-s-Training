@@ -5,7 +5,14 @@
 <h2>JavaScript Scope</h2>
 
 <p>A GLOBAL variable can be accessed from any script or function.</p>
+  </pre>&lt;script&gt;
+let carName = &quot;Volvo&quot;;
+myFunction();
 
+function myFunction() {
+  document.getElementById(&quot;demo&quot;).innerHTML = &quot;I can display &quot; + carName;
+}
+  &lt;/script&gt;</pre>
 <p id="demo"></p>
 
 <script>
