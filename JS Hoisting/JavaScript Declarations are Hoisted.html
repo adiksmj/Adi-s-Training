@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>JavaScript Declarations are Hoisted</h1>
+  <p>In JavaScript, a variable can be declared after it has been used.</br>
+
+  In other words; a variable can be used before it has been declared.</p>
+<pre>&lt;script&gt;
+x = 5; // Assign 5 to x
+
+elem = document.getElementById(&quot;demo&quot;); // Find an element 
+elem.innerHTML = x;           // Display x in the element
+
+var x; // Declare x
+&lt;/script&gt;</pre>
+<p id="demo"></p>
+
+<script>
+x = 5; // Assign 5 to x
+
+elem = document.getElementById("demo"); // Find an element 
+elem.innerHTML = x;           // Display x in the element
+
+var x; // Declare x
+</script>
+
+</body>
+</html> 
