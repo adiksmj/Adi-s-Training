@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The JavaScript <i>this</i> Keyword</h2>
+<p>The call() and apply() methods are predefined JavaScript methods.</p>
+<p>They can both be used to call an object method with another object as argument.</p>
+<p>In this example <strong>this</strong> refers to person2, even if it is a method of person1:</p>
+<pre>&lt;script&gt;
+const person1 = {
+  fullName: function() {
+    return this.firstName + &quot; &quot; + this.lastName;
+  }
+}
+const person2 = {
+  firstName:&quot;John&quot;,
+  lastName: &quot;Doe&quot;,
+}
+let x = person1.fullName.call(person2); 
+document.getElementById(&quot;demo&quot;).innerHTML = x; 
+&lt;/script&gt;</pre>
+
+<p id="demo"></p>
+
+<script>
+const person1 = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const person2 = {
+  firstName:"John",
+  lastName: "Doe",
+}
+let x = person1.fullName.call(person2); 
+document.getElementById("demo").innerHTML = x; 
+</script>
+
+</body>
+</html>
+
+
