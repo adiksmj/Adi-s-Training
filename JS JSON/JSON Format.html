@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>The JSON Format Evaluates to JavaScript Objects</h1>
+  <span>The JSON format is syntactically identical to the code for creating JavaScript objects.</span>
+<span>Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.</span>
+
+  <h2>JSON Syntax Rules</h2>
+  <ul>
+    <li>Data is in name/value pairs</li>
+<li>Data is separated by commas</li>
+<li>Curly braces hold objects</li>
+<li>Square brackets hold arrays</li>
+  </ul>
+  </br>
+  </br>
+
+<h2>JSON Data - A Name and a Value</h2>
+<span>JSON data is written as name/value pairs, just like JavaScript object properties.</span>
+<span>A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value:</span>
+<pre>&quot;firstName&quot;:&quot;John&quot;</pre>
+<span>JSON names require double quotes. JavaScript names do not.</span>
+</br>
+</br>
+
+<h2>JSON Objects</h2>
+<span>JSON objects are written inside curly braces.</span>
+<span>Just like in JavaScript, objects can contain multiple name/value pairs:</span>
+<pre>{&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;}</pre>
+</br>
+</br>
+
+<h2>JSON Arrays</h2>
+<span>JSON arrays are written inside square brackets.</span>
+<span>Just like in JavaScript, an array can contain objects:</span>
+<pre>
+&quot;employees&quot;:[
+  {&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
+  {&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
+  {&quot;firstName&quot;:&quot;Peter&quot;, &quot;lastName&quot;:&quot;Jones&quot;}
+]
+</pre>
+<span>In the example above, the object "employees" is an array. It contains three objects.</span>
+<span>Each object is a record of a person (with a first name and a last name).</span>
+
+</body>
+</html>
