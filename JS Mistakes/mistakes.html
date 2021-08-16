@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Accidentally Using the Assignment Operator</h1>
+<p>JavaScript programs may generate unexpected results if a programmer accidentally uses an assignment operator (=), instead of a comparison operator (==) in an if statement.</p>
+
+<p>This if statement returns false (as expected) because x is not equal to 10:</p>
+<pre>
+    let x = 0;
+    if (x == 10)
+</pre>
+<p>This if statement returns true (maybe not as expected), because 10 is true:</p>
+<pre>
+    let x = 0;
+    if (x = 10)
+</pre>
+<h1>Expecting Loose Comparison</h1>
+<p>In regular comparison, data type does not matter. This if statement returns true:</p>
+<pre>
+    let x = 10;
+    let y = &quot;10&quot;;
+    if (x == y)
+</pre>
+<p>In strict comparison, data type does matter. This if statement returns false:</p>
+<pre>
+    let x = 10;
+    let y = &quot;10&quot;;
+    if (x === y)
+</pre>
+</body>
+</html>
