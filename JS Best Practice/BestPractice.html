@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Avoid Global Variables</h1>
+    <span>Minimize the use of global variables.</span>
+    <span>all data types, objects, and functions.</span>
+    <span>variables and functions can be overwritten by other scripts.</span>
+    <span>Use local variables instead, and learn how to use closures.</span>
+
+    <h1>Always Declare Local Variables</h1>
+    <span>All variables used in a function should be declared as local variables.</span>
+    <span>Local variables must be declared with the var keyword or the let keyword, otherwise they will become global variables.</span>
+
+    <h1>Declarations on Top</h1>
+    <p>It is a good coding practice to put all declarations at the top of each script or function.</p>
+
+    <p>This will:</p>
+    <ul>
+    <li>Give cleaner code</li>
+    <li>Provide a single place to look for local variables</li>
+    <li>Make it easier to avoid unwanted (implied) global variables</li>
+    <li>Reduce the possibility of unwanted re-declarations</li>
+    </ul>
+    <pre>
+        // Declare at the beginning
+    let firstName, lastName, price, discount, fullPrice;
+    
+    // Use later
+    firstName = &quot;John&quot;;
+    lastName = &quot;Doe&quot;;
+    
+    price = 19.90;
+    discount = 0.10;
+    
+    fullPrice = price - discount;
+    </pre>
+
+    <h1>Initialize Variables</h1>
+    <p>
+        It is a good coding practice to initialize variables when you declare them.
+        
+        This will:
+    </p>
+
+    <ul>
+        <li>Give cleaner code</li>
+        <li>Provide a single place to initialize variables</li>
+        <li>Avoid undefined values</li>
+    </ul>
+    <h1>Don't Use new Object()</h1>
+<ul>
+    <li>Use "" instead of new String()</li>
+    <li>Use 0 instead of new Number()</li>
+    <li>Use false instead of new Boolean()</li>
+    <li>Use {} instead of new Object()</li>
+    <li>Use [] instead of new Array()</li>
+    <li>Use /()/ instead of new RegExp()</li>
+   <li> Use function (){} instead of new Function()</li>
+</ul>
+</body>
+</html>
