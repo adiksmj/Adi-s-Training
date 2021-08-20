@@ -21,13 +21,14 @@ while (ask) {
     } else if ( p == 'human') {
         result = (kom == 'ant') ? 'WIN !' : 'LOSE !'; 
     } else {
-        result = 'entered the incorrect option'
+        result = 'you entered incorrect option'
     }
     let skorM = '';
     let skorK = '';
     let skorS = '';
     if (result == 'WIN !') {
         skorM = '1';
+    
     } else if (result == 'LOSE !') {
         skorK = '1';
     } else if (result == 'DRAW !') {
@@ -52,7 +53,7 @@ while (ask) {
     //     skorS = '1';
     // };
 
-    alert('You chose : '+ p +', and Computer chose : '+ kom +'\nSo you '+ result +'\nYour Score : WIN '+ skorM +' , LOSE '+ skorK +', DRAW '+ skorS +'')
+    alert('You chose : '+ p +', and Computer chose : '+ kom +'\nThe result is '+ result +'\nYour Score : WIN '+ skorM +' , LOSE '+ skorK +', DRAW '+ skorS +'')
 
     ask = confirm('Play Again ?')
 }
