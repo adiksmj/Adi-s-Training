@@ -23,6 +23,7 @@ while (ask) {
     } else {
         result = 'you entered incorrect option'
     }
+
     let skorM = '';
     let skorK = '';
     let skorS = '';
@@ -36,22 +37,6 @@ while (ask) {
     } else {
         
     }
-
-    // if (result == 'WIN !') {
-    //     skorK = '0';
-    // } else if (result == 'LOSE !') {
-    //     skorK = '1';
-    // } else {
-    //     skorK = '0';
-    // };
-
-    // if (result == 'WIN !') {
-    //     skorS = '0';
-    // } else if (result == 'LOSE !') {
-    //     skorS = '0';
-    // } else {
-    //     skorS = '1';
-    // };
 
     alert('You chose : '+ p +', and Computer chose : '+ kom +'\nThe result is '+ result +'\nYour Score : WIN '+ skorM +' , LOSE '+ skorK +', DRAW '+ skorS +'')
 
