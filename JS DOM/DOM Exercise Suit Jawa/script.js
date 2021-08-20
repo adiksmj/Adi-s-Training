@@ -1,4 +1,10 @@
-var ask = true
+var ask = true;
+
+// di ubah menjadi variabel global
+let skorM = 0;
+let skorK = 0;
+let skorS = 0;
+
 while (ask) {
     let p = prompt('choose one :\nhuman, elephant, ant');
 
@@ -21,26 +27,26 @@ while (ask) {
     } else if ( p == 'human') {
         result = (kom == 'ant') ? 'WIN !' : 'LOSE !'; 
     } else {
-        result = 'you entered incorrect option'
+        result = 'you entered incorrect option';
     }
 
-    let skorM = '';
-    let skorK = '';
-    let skorS = '';
+   
     if (result == 'WIN !') {
-        skorM = '1';
-    
+        // sama seperti skorM = skorM + 1;
+        // bentuk lainnya bisa skorM += 1;
+        skorM++;
     } else if (result == 'LOSE !') {
-        skorK = '1';
+        skorK++;
     } else if (result == 'DRAW !') {
-        skorS = '1';
-    } else {
-        
+        skorS++;
     }
 
-    alert('You chose : '+ p +', and Computer chose : '+ kom +'\nThe result is '+ result +'\nYour Score : WIN '+ skorM +' , LOSE '+ skorK +', DRAW '+ skorS +'')
-
-    ask = confirm('Play Again ?')
+    alert('You chose : '+ p +', and Computer chose : '+ kom +'\nThe result is '+ result +'\nYour Score : WIN '+ skorM +' , LOSE '+ skorK +', DRAW '+ skorS);
+    if(confirm('Play Again ?')){
+        ask = true;
+    } else {
+        ask = false;
+    }
 }
 
 alert('Thank you for playing, have a great  time :)')
