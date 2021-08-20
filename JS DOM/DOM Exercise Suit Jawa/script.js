@@ -1,29 +1,60 @@
-var tanya = true
-while (tanya) {
-    let p = prompt('pilih salah satu :\norang, gajah, semut');
+var ask = true
+while (ask) {
+    let p = prompt('choose one :\nhuman, elephant, ant');
 
-function pilihanComputer() {
-    const kom = Math.random()
-    if (kom < 0.34) return 'gajah';
-    if (kom >= 0.34 && kom < 0.67) return 'orang';
-    return 'semut';
-}
-    let hasil = '';
-    if ( p == pilihanComputer()) {
-        hasil = 'SERI !';
-    } else if ( p == 'gajah') {
-        hasil = (pilihanComputer() == 'orang') ? 'MENANG !' : 'KALAH !'; 
-    } else if (pilihanComputer() == 'semut') {
-        hasil = (pilihanComputer() == 'gajah') ? 'MENANG !' : 'KALAH !'; 
-    } else if ( p == 'orang') {
-        hasil = (pilihanComputer() == 'semut') ? 'MENANG !' : 'KALAH !'; 
+    let kom = Math.random()
+    if (kom < 0.34) {
+        kom = 'elephant';
+    }else if (kom >= 0.34 && kom < 0.67) {
+        kom = 'human';
+    }else {
+        kom = 'ant';
+    } 
+
+    let result = '';
+    if ( p == kom) {
+        result = 'DRAW !';
+    } else if ( p == 'elephant') {
+        result = (kom == 'human') ? 'WIN !' : 'LOSE !'; 
+    } else if (p == 'ant') {
+        result = (kom == 'elephant') ? 'WIN !' : 'LOSE !'; 
+    } else if ( p == 'human') {
+        result = (kom == 'ant') ? 'WIN !' : 'LOSE !'; 
     } else {
-        hasil = 'memasukkan pilihan yang salah'
+        result = 'entered the incorrect option'
+    }
+    let skorM = '';
+    let skorK = '';
+    let skorS = '';
+    if (result == 'WIN !') {
+        skorM = '1';
+    } else if (result == 'LOSE !') {
+        skorK = '1';
+    } else if (result == 'DRAW !') {
+        skorS = '1';
+    } else {
+        
     }
 
-    alert('Kamu memilih : '+ p +', dan Computer memilih : '+ pilihanComputer() +'\nMaka kamu '+ hasil +'')
+    // if (result == 'WIN !') {
+    //     skorK = '0';
+    // } else if (result == 'LOSE !') {
+    //     skorK = '1';
+    // } else {
+    //     skorK = '0';
+    // };
 
-    tanya = confirm('Lagi ?')
+    // if (result == 'WIN !') {
+    //     skorS = '0';
+    // } else if (result == 'LOSE !') {
+    //     skorS = '0';
+    // } else {
+    //     skorS = '1';
+    // };
+
+    alert('You chose : '+ p +', and Computer chose : '+ kom +'\nSo you '+ result +'\nYour Score : WIN '+ skorM +' , LOSE '+ skorK +', DRAW '+ skorS +'')
+
+    ask = confirm('Play Again ?')
 }
 
-alert('Terimakasih sudah bermain :)')
+alert('Thank you for playing, have a great  time :)')
