@@ -42,21 +42,44 @@
 
 //3. Constractor Function
 //keyword new
-function Mahasiswa(nama, energi) {
-    //let mahasiswa = {};
-    this.nama = nama;
-    this.energi = energi;
+// function Mahasiswa(nama, energi) {
+//     //let mahasiswa = {};
+//     this.nama = nama;
+//     this.energi = energi;
     
-    this.makan = function (porsi) {
+//     this.makan = function (porsi) {
+//         this.energi += porsi;
+//         console.log(`Halo ${this.nama}, selamat makan !`);
+//     }
+//     this.main = function (jam) {
+//         this.energi -= jam;
+//         console.log(`Halo ${this.nama}, selamat bermain`);
+//     }
+
+//     //return mahasiswa;
+// }
+
+// let adi = new Mahasiswa('Adi Kusuma', 10); //dont forget the keyword new
+
+//4. Object.create()
+const methodMahasiswa = {
+    makan: function (porsi) {
         this.energi += porsi;
         console.log(`Halo ${this.nama}, selamat makan !`);
-    }
-    this.main = function (jam) {
+    },
+    main: function (jam) {
         this.energi -= jam;
         console.log(`Halo ${this.nama}, selamat bermain`);
     }
-
-    //return mahasiswa;
 }
+function Mahasiswa(nama, energi) {
+    let mahasiswa = Object.create(methodMahasiswa);
+        mahasiswa.nama = nama;
+        mahasiswa.energi = energi;
+    
+    
+        return mahasiswa;
+    }
 
-let adi = new Mahasiswa('Adi Kusuma', 10);
+let adi = Mahasiswa('Adi Kusuma', 10);
+let kusuma = Mahasiswa('Kusuma Jaya', 10);
