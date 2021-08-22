@@ -85,19 +85,40 @@
 // let kusuma = Mahasiswa('Kusuma Jaya', 10);
 
 //5. Prototype
-function Mahasiswa(nama, energi) {
+// function Mahasiswa(nama, energi) {
+//         this.nama = nama,
+//         this.energi = energi
+// }
+
+// Mahasiswa.prototype.makan = function (porsi) {
+//     this.energi += porsi;
+//     return `Halo ${this.nama}, selamat makan !`;
+// };
+// Mahasiswa.prototype.main = function (jam) {
+//     this.energi -= jam;
+//     return `Halo ${this.nama}, selamat bermain`;
+// };
+
+// let adi = new Mahasiswa('Adi Kusuma', 10);
+// let kusuma = new Mahasiswa('Kusuma Jaya', 10);
+
+
+//6. using Class
+class Mahasiswa {
+    constructor(nama, energi) {
         this.nama = nama,
         this.energi = energi
-}
+    }
 
-Mahasiswa.prototype.makan = function (porsi) {
+    makan(porsi) {
     this.energi += porsi;
     return `Halo ${this.nama}, selamat makan !`;
-};
-Mahasiswa.prototype.main = function (jam) {
+    }
+
+    main(jam) {
     this.energi -= jam;
     return `Halo ${this.nama}, selamat bermain`;
-};
-
+    }
+}
 let adi = new Mahasiswa('Adi Kusuma', 10);
 let kusuma = new Mahasiswa('Kusuma Jaya', 10);
